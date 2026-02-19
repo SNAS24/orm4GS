@@ -51,7 +51,7 @@ const orm = init(_book.getSheetByName('Arhiv'));
 
 ```javascript
 function isInBD(number) {
-  const res = orm.guide_main.phonenamber.find(number, false);
+  const res = orm.guide_main.phonenumber.find(number, false);
   console.log(number);
   console.log(res?.plot);
 
@@ -67,7 +67,7 @@ function isInBD(number) {
 
 * `this.orm` — корневой объект ORM.
 * `guide_main` — имя таблицы при варианте с 2 строками заголовка.
-* `phonenamber` — имя столбца, по которому выполняется поиск.
+* `phonenumber` — имя столбца, по которому выполняется поиск.
 * `.find(value, exactMatch)` — метод поиска:
   * `value` — искомое значение.
   * `exactMatch` — флаг точного совпадения (`false` — частичное совпадение, `true` — точное).
@@ -128,7 +128,7 @@ addNewUser(telNamber, nLand, sName, userFN) {
   const _sKommandTmp = this.cfg.v.hunCom;
   const _sKommand = '....';
   const newData = {
-    phonenamber: telNamber,
+    phonenumber: telNamber,
     cod: newCod,
     plot: nLand,
     fio: sName,

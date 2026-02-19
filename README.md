@@ -4,13 +4,13 @@
 Тогда запись и чтение данных БД плосков в таблице выглядит так:
 ```
   isInBD(namber) {
-    const res = this.orm.guide_main.phonenamber.find(namber);
+    const res = this.orm.guide_main.phonenumber.find(namber);
     console.log(namber);
     console.log(res?.plot);
     return { f: res ? true : false, plot: res?.plot, fio: res?.fio };
   }
   updateBD(namber,fio) {
-    const res = this.orm.guide_main.phonenamber.find(namber);
+    const res = this.orm.guide_main.phonenumber.find(namber);
     res.fio = fio;
     return { f: res ? true : false };
   }
@@ -63,14 +63,14 @@
 
 ### Преимущества
 
-* **Именованный доступ.** Обращайтесь к данным через `row.phonenamber`, а не `row[5]`.
+* **Именованный доступ.** Обращайтесь к данным через `row.phonenumber`, а не `row[5]`.
 * **Гибкость.** Изменение порядка столбцов в таблице не требует правок в коде.
 * **Универсальная инициализация.** Поддержка передачи параметров как списком, так и объектом.
 
 ## Пример таблицы
 | Guide_Main   | | | | | | | | | | |
 |--------------|-----|-----|-----------------------|-----------|---|----------------------------------|-----|-------|-----|-------------|
-| PhoneNamber  | Cod | Plot| FIO                   | Command   |Reg| Hash                             | Who | Check | Del | Комментарий |
+| PhoneNumber  | Cod | Plot| FIO                   | Command   |Reg| Hash                             | Who | Check | Del | Комментарий |
 | +79111111111 | 1 | 1     | Иванов1 Иван Иванович | ADD,111,1 | 1 | 70945140d5446edc9818a63b53927495 | —   | —     | —   | —           |
 | +79111111111 | 2 | 2     | Иванов2 Иван Иванович | ADD,111,2 | 1 | f52c7f959a0a275b402d5dda7e45cadc | —   | —     | —   | —           |
 | +79111111111 | 5 | 3     | Иванов3 Иван Иванович | ADD,111,3 | 1 | fdc4ce4d3113e656c9b51dcab30600f8 | —   | —     | —   | —           |
