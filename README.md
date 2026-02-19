@@ -22,7 +22,8 @@
 Руки не доходят.....
 
 ## Вот еще один пример
-```function test_addNewUser() {
+```
+function test_addNewUser() {
   const _wrk = new Worker(undefined, undefined);
   const newData = {
     fio: `Петя_${_wrk.getFreeCod()}`,
