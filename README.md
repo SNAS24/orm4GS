@@ -2,15 +2,15 @@
 Примеры кода:
 Прелесть, когда работать надо с таблицей - справочником.
 Тогда запись и чтение данных БД плосков в таблице выглядит так:
-```
-  isInBD(namber) {
-    const res = this.orm.guide_main.phonenumber.find(namber);
-    console.log(namber);
+```javascript
+  isInBD(number) {
+    const res = this.orm.guide_main.phonenumber.find(number);
+    console.log(number);
     console.log(res?.plot);
     return { f: res ? true : false, plot: res?.plot, fio: res?.fio };
   }
-  updateBD(namber,fio) {
-    const res = this.orm.guide_main.phonenumber.find(namber);
+  updateBD(number,fio) {
+    const res = this.orm.guide_main.phonenumber.find(number);
     res.fio = fio;
     return { f: res ? true : false };
   }
@@ -22,7 +22,7 @@
 Руки не доходят.....
 
 ## Вот еще один пример
-```
+```javascript
 function test_addNewUser() {
   const _wrk = new Worker(undefined, undefined);
   const newData = {

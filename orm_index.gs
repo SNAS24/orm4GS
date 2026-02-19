@@ -8,7 +8,7 @@
 * * findNot({any})
 * * getValues(none)
 * @param {string} guide
-* @param {namber} col
+* @param {number} col
 */
 class Column {
   constructor(guide, col) {
@@ -165,7 +165,7 @@ class Guide {
   * Возвращает объект row: new Proxy(row, handler), содержащий: 
   * <pre>
   * </pre>
-  * @param {namber} rowIndex - chose one of following:
+  * @param {number} rowIndex - chose one of following:
   * * createRow(1);
   * * createRow(3);
   * @returns {Guide.createRow}

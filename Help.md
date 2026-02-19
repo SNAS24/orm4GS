@@ -122,13 +122,13 @@ addNewUser(name, phone, plot) {
 }
 
 //или так:
-addNewUser(telNamber, nLand, sName, userFN) {
-  if (telNamber === undefined) return;
+addNewUser(telNumber, nLand, sName, userFN) {
+  if (telNumber === undefined) return;
   const newCod = this.getFreeCod();
   const _sKommandTmp = this.cfg.v.hunCom;
   const _sKommand = '....';
   const newData = {
-    phonenumber: telNamber,
+    phonenumber: telNumber,
     cod: newCod,
     plot: nLand,
     fio: sName,
