@@ -21,6 +21,28 @@
 Но его нужно дотачивать: делать проверки и защиты на контроль данных, что бы не падал.
 Руки не доходят.....
 
+## Вот еще один пример
+```function test_addNewUser() {
+  const _wrk = new Worker(undefined, undefined);
+  const newData = {
+    fio: `Петя_${_wrk.getFreeCod()}`,
+    cod: _wrk.getFreeCod(),
+    plot: '11',
+    phonenumber: 79112223300+_wrk.getFreeCod(),
+  };
+  _wrk.orm.guide_main.getFreeRow().setValues(newData);
+
+  const ormRow_by_phone = _wrk.orm.guide_main.phonenumber.find(newData.phonenumber);
+  ormRow_by_phone.who='Добавим кто';
+  ormRow_by_phone.command='Добавим команду';
+  const _hash = ormRow_by_phone.hash;
+  if(_hash == '') ormRow_by_phone.hash='sgsty66ADS76SADA'
+}
+```
+Самая прелесть в последних 5 строках!!!
+
+
+
 Справочно:
 **Object‑Relational Mapping (ORM, «объектно‑реляционное отображение»)** — программная технология, создающая «мост» между объектно‑ориентированными языками программирования и реляционными базами данных. Она преобразует данные между двумя принципиально разными парадигмами.
 
