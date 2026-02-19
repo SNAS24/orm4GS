@@ -47,6 +47,8 @@
 
 ## Пример таблицы
 
+
+| Guide_Main | PhoneNamber | UNIQ | Cod | Plot | FIO | Command | Registered | Who | Check | Del | Hash | Комментарий |
 | Guide_Main   |      |     |      |     |         |            |     |       |     |      |             |
 | PhoneNamber  | UNIQ | Cod | Plot | FIO | Command | Registered | Who | Check | Del | Hash | Комментарий |
 |--------------|------------|------|-----|------|-----|---------|------------|-----|-------|-----|------|-------------|
